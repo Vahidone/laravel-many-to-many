@@ -157,8 +157,13 @@ class ProjectController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function destroy(Project $project)
+
     {
 
+        // non elimino le relazioni tra i projects e le technologie perché nella mihgration ho messo cascadeOnDelete() altrimenti avrei dovuto fare_ $project->technologies()->detach();
+
+
+        // se il progetto contiene un'immagine vuol dire che la devo eliminare
         if($project->image){
             Storage::disk('public')->delete($project->image);
         }

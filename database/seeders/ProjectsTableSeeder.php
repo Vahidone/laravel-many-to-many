@@ -18,7 +18,7 @@ class ProjectsTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
-        for($i = 0; $i < 100; $i++){
+        for($i = 0; $i < 30; $i++){
             $new_project = new Project();
             // associo randomicamente una type al project con il seguente metodo
             $new_project->type_id = Type::inRandomOrder()->first()->id;

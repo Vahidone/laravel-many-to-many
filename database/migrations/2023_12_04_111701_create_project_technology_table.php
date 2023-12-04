@@ -12,10 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('project_technology', function (Blueprint $table) {
+
           $table->unsignedBigInteger('project_id');
+          $table->foreign('project_id')->references('id')->on('projects')->cascadeOnDelete();
+
+
           $table->unsignedBigInteger('technology_id');
-          $table->foreign('project_id')->references('id')->on('projects')->onDelete('cascade');
-          $table->foreign('technology_id')->references('id')->on('technologies')->onDelete('cascade');
+          $table->foreign('technology_id')->references('id')->on('technologies')->cascadeOnDelete();
+        //   se viene cancellato la technologia non viene cancellato il progetto
         });
     }
 
