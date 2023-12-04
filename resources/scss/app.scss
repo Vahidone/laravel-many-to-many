@@ -92,3 +92,20 @@ aside {
 }
 
 
+// stili per accordion in type-projects.blade.php
+
+#accordionExample,
+#accordionExample .accordion-item,
+#accordionExample .accordion-button,
+#accordionExample .accordion-button:hover
+ {
+    background-color: #212529;
+}
+
+#accordionExample .accordion-button {
+    color: #ffffff;
+}
+
+
+
+// ------------------------------------
