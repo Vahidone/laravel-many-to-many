@@ -18,6 +18,10 @@
 
         <span class="badge text-bg-info">{{ $technology->name }}</span>
 
+        @empty
+
+         <span class="badge text-bg-warning">Non sono presenti Technology</span>
+
        @endforeach
 
 
