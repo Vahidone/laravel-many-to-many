@@ -8,30 +8,34 @@
 
  <div class="main-csm">
 
-    <h1 class="text-white mb-5">Elenco progetti relativi al {{ $technology->name}}</h1>
+        <h1 class="text-white mb-5">Elenco progetti relativi al {{ $technology->name}}</h1>
 
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Project name</th>
+        <table class="table table-dark table-striped text-center">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Project name</th>
 
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-         @foreach ($technology->projects as $project)
+            </tr>
+            </thead>
+            <tbody>
 
-            <td>{{ $project->id }}</td>
-            <td>{{ $project->title }}</td>
+            @foreach ($technology->projects as $project)
 
-         @endforeach
+                <tr>
+
+                    <td>{{ $project->id }}</td>
+                    <td>{{ $project->title }}</td>
+
+                </tr>
+
+            @endforeach
 
 
-        </tr>
 
-        </tbody>
-    </table>
+
+            </tbody>
+        </table>
 
 
 

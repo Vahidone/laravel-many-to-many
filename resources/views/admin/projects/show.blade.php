@@ -11,9 +11,10 @@
         </h1>
 
         @if($project->type)
-            <p class="mb-4">Type: <strong>{{ $project->type->title}}</strong></p>
+            <p class="mb-5">Type: <strong>{{ $project->type->title}}</strong></p>
         @endif
 
+        <span>Technologies: </span>
         @forelse ($project->technologies as $technology)
 
             <span class="badge text-bg-info">{{ $technology->name }}</span>
@@ -25,13 +26,13 @@
         @endforelse
 
 
-        <div class="w-50 mb-4">
+        <div class="w-50 my-5">
             <img class="img-fluid mb-4" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
         </div>
 
-        <p class="mb-4"><strong>{{ $project->text }}</strong></p>
-        <p class="mb-4">Data: <strong>{{ $project->release_date }}</strong></p>
-        <p class="mb-4">Description: <strong>{{ $project->description }}</strong></p>
+        <p class="mb-5"><strong>{{ $project->text }}</strong></p>
+        <p class="mb-5">Data: <strong>{{ $project->release_date }}</strong></p>
+        <p class="mb-5">Description: <strong>{{ $project->description }}</strong></p>
 
 
     </div>
