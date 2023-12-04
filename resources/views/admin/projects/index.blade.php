@@ -65,7 +65,7 @@
 
                         @forelse ($project->technologies as $technology)
 
-                            <span class="badge text-bg-info">{{ $technology->name }}</span>
+                            <span><a class="badge text-bg-info text-white text-decoration-none" href="{{ route('admin.project-technology', $technology)}}">{{ $technology->name }}</a></span>
 
                         @empty
                             -

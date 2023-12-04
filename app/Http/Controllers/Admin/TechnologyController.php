@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Technology;
 use Illuminate\Support\Str;
 use App\Functions\Helper;
+use App\Models\Project;
 
 class TechnologyController extends Controller
 {
@@ -20,6 +21,15 @@ class TechnologyController extends Controller
 
         $technologies = Technology::all();
         return view('admin.technologies.index', compact('technologies'));
+    }
+
+    public function projectsTechnologies(Technology $technology) {
+
+
+        $projects = $technology->projects;
+
+        return view ('admin.technologies.projectTechnologies', compact('projects', 'technology'));
+
     }
 
     /**
