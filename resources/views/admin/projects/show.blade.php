@@ -14,15 +14,15 @@
             <p class="mb-4">Type: <strong>{{ $project->type->title}}</strong></p>
         @endif
 
-       @foreach ($project->technologies as $technology)
+        @forelse ($project->technologies as $technology)
 
-        <span class="badge text-bg-info">{{ $technology->name }}</span>
+            <span class="badge text-bg-info">{{ $technology->name }}</span>
 
-        @empty
+            @empty
 
-         <span class="badge text-bg-warning">Non sono presenti Technology</span>
+            <span class  ="badge text-bg-warning">Non sono presenti Technology</span>
 
-       @endforeach
+        @endforelse
 
 
         <div class="w-50 mb-4">

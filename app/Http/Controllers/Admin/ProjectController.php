@@ -10,6 +10,7 @@ use App\Models\Type;
 use App\Functions\Helper;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\ProjectRequest;
+use App\Models\Technology;
 
 class ProjectController extends Controller
 {
@@ -38,8 +39,9 @@ class ProjectController extends Controller
         $method = 'POST';
         $route = route('admin.projects.store');
         $project = null;
+        $technologies = Technology::all();
         $types = Type::all();
-        return view('admin.projects.create-edit', compact('title','method', 'route', 'project', 'types'));
+        return view('admin.projects.create-edit', compact('title','method', 'route', 'project', 'types', 'technologies'));
     }
 
     /**
