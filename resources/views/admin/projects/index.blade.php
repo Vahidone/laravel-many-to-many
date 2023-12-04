@@ -49,6 +49,7 @@
                     <th class="fw-bold fs-5">Description</th>
                     <th class="fw-bold fs-5">Date</th>
                     <th class="fw-bold fs-5">Type</th>
+                    <th class="fw-bold fs-5">Technology</th>
                     <th class="fw-bold fs-5">Action</th>
                 </tr>
             </thead>
@@ -60,6 +61,18 @@
                     <td>{{ $project->description }}</td>
                     <td>{{ $project->release_date }}</td>
                     <td>{{ $project->type?->title ?? '-' }}</td>
+                    <td>
+
+                        @forelse ($project->technologies as $technology)
+
+                            <span class="badge text-bg-info">{{ $technology->name }}</span>
+
+                        @empty
+                            -
+                        @endforelse
+
+
+                    </td>
                     <td style="width: 170px">
 
                         <a class="btn btn-success" href="{{ route('admin.projects.show', $project)}}"><i class="fa-regular fa-eye"></i></a>
