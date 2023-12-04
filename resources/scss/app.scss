@@ -1,0 +1,92 @@
+@import '~bootstrap/scss/bootstrap';
+
+body {
+    font-family: 'Roboto Slab', serif;
+    background-image: url('/public/img/main_bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+.hide {
+    display: none;
+}
+
+
+header {
+    height: 70px;
+    padding: 0 20px;
+    padding-top: 8px;
+
+
+}
+
+.main-wrapper {
+    height: calc(100vh - 70px);
+    .form-hidden{
+        width: 100%;
+        border: none;
+        &:focus{
+            border:none;
+            outline: none;
+        }
+    }
+}
+
+aside {
+    width: 250px;
+    height: 100%;
+    padding-top: 30px;
+    ul {
+        list-style: none;
+        li {
+            margin-bottom: 20px;
+            a {
+                color: white;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                    color: rgb(207, 204, 204);
+                    text-underline-offset: 5px;
+                }
+            }
+
+        }
+
+    }
+
+}
+
+.main-csm {
+    width: 100%;
+    padding: 100px;
+
+}
+
+.form-hidden {
+    width: 100%;
+    border: none;
+
+    &:focus {
+        border: none;
+        outline: none;
+    }
+}
+
+
+
+// link in Projects & Types List
+
+.link-type-projects {
+
+    color: rgb(162, 196, 162);
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        color: rgb(207, 204, 204);
+        text-underline-offset: 7px;
+    }
+}
+
+
