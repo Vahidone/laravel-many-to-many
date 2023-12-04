@@ -103,7 +103,8 @@ class ProjectController extends Controller
         $method = 'PUT';
         $route = route('admin.projects.update', $project);
         $types = Type::all();
-        return view('admin.projects.create-edit', compact('title','method', 'route', 'project', 'types'));
+        $technologies = Technology::all();
+        return view('admin.projects.create-edit', compact('title','method', 'route', 'project', 'types', 'technologies'));
 
     }
 
