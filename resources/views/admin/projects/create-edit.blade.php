@@ -72,7 +72,16 @@
                 <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
 
                     @foreach ($technologies as $technology)
-                        <input type="checkbox" class="btn-check" id="tech_{{ $technology->id }}" autocomplete="off" value="{{ $technology->id }}" name="technologies[]">
+                        <input
+                        type="checkbox" class="btn-check"
+                        id="tech_{{ $technology->id }}"
+                        autocomplete="off"
+                        value="{{ $technology->id }}"
+                        name="technologies[]"
+                        @if (in_array($technology->id, old('technologies', [])))
+                            checked
+                        @endif
+                        >
                         <label class="btn btn-outline-primary text-white" for="tech_{{ $technology->id }}"> {{ $technology->name }}</label>
                     @endforeach
                 </div>
