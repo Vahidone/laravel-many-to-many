@@ -11,7 +11,7 @@
     <div class="main-csm">
         <h1 class="text-white mb-5">Projects for Type List</h1>
 
-        <div class="accordion" id="accordionExample">
+        <div class="accordion accordion-transparent" id="accordionExample">
             @foreach ($types as $type)
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-heading-{{ $type->id }}">

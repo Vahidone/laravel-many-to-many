@@ -34,7 +34,7 @@
         >
             @csrf
             @method($method)
-            <div class="mb-3">
+            <div class="mb-5">
                 <label for="title" class="form-label text-white">Titolo Progetto *</label>
                 <input
                   id="title"
@@ -49,21 +49,6 @@
 
                 @enderror
 
-
-                <div class="mb-3">
-
-                    <label for="type_id" class="form-label text-white">Type</label>
-
-                    <select name="type_id" class="form-select" id="type_id" >
-                        <option value="">Select Type</option>
-                        @foreach ($types as $type)
-                            <option value="{{ $type->id }}" @if ($type->id === old('type_id', $project?->type?->id)) selected @endif>
-                                {{ $type->title }}
-                            </option>
-                        @endforeach
-                    </select>
-
-                </div>
             </div>
 
 
@@ -89,22 +74,45 @@
             </div>
 
 
+            <div class="row">
+
+                <div class="col-6">
+                    <label for="release_date" class="form-label text-white">Data</label>
+                    <input
+                      id="release_date"
+                      class="form-control @error('release_date') is-invalid @enderror"
+                      name="release_date"
+                      type="text"
+                      value="{{ old('release_date', $project?->release_date) }}"
+                    >
+                    @error('release_date')
+                        <p id="alert-message-p" class="text-danger">{{ $message }}</p>
+                    @enderror
+                </div>
 
 
 
-            <div class="mb-3">
-                <label for="release_date" class="form-label text-white">Data</label>
-                <input
-                  id="release_date"
-                  class="form-control @error('release_date') is-invalid @enderror"
-                  name="release_date"
-                  type="text"
-                  value="{{ old('release_date', $project?->release_date) }}"
-                >
-                @error('release_date')
-                    <p id="alert-message-p" class="text-danger">{{ $message }}</p>
-                @enderror
+
+                <div class="col-6">
+
+                    <label for="type_id" class="form-label text-white">Type</label>
+
+                    <select name="type_id" class="form-select" id="type_id" >
+                        <option value="">Select Type</option>
+                        @foreach ($types as $type)
+                            <option value="{{ $type->id }}" @if ($type->id === old('type_id', $project?->type?->id)) selected @endif>
+                                {{ $type->title }}
+                            </option>
+                        @endforeach
+                    </select>
+
+                </div>
+
             </div>
+
+
+
+
 
 
             <div class="mb-3">

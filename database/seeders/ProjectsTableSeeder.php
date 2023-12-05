@@ -22,6 +22,7 @@ class ProjectsTableSeeder extends Seeder
             $new_project = new Project();
             // associo randomicamente una type al project con il seguente metodo
             $new_project->type_id = Type::inRandomOrder()->first()->id;
+
             $new_project->title = $faker->sentence();
             $new_project->slug = Helper::generateSlug($new_project->title, Project::class);
             $new_project->description = $faker->paragraph();

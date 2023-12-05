@@ -41,13 +41,19 @@
 
 
 
-        <table class="table table-dark table-striped text-center">
+        <table class="table table-dark table-striped text-center table_bg_csm">
             <thead>
                 <tr>
-                    <th class="fw-bold fs-5">ID</th>
-                    <th class="fw-bold fs-5">Title</th>
+                    <th class="fw-bold fs-5" style="width: 70px;">
+                        <a class="text-white text-decoration-none" href="{{ route('admin.order-by', ['direction' =>$direction, 'column' =>'id'])}}">ID <i class="fa-solid fa-caret-down"></i></a>
+                    </th>
+                    <th class="fw-bold fs-5">
+                        <a class="text-white text-decoration-none" href="{{ route('admin.order-by', ['direction' =>$direction, 'column' =>'title'])}}">Title <i class="fa-solid fa-caret-down"></i></a>
+                    </th>
                     <th class="fw-bold fs-5">Description</th>
-                    <th class="fw-bold fs-5">Date</th>
+                    <th class="fw-bold fs-5" style="width: 80px;">
+                        <a class="text-white text-decoration-none" href="{{ route('admin.order-by', ['direction' =>$direction, 'column' =>'release_date'])}}">Date <i class="fa-solid fa-caret-down"></i></a>
+                    </th>
                     <th class="fw-bold fs-5">Type</th>
                     <th class="fw-bold fs-5">Technology</th>
                     <th class="fw-bold fs-5">Action</th>
@@ -68,7 +74,7 @@
                             <span><a class="badge text-bg-info text-white text-decoration-none" href="{{ route('admin.project-technology', $technology)}}">{{ $technology->name }}</a></span>
 
                         @empty
-                            -
+                        <a class="badge text-bg-info text-white text-decoration-none" href="{{ route('admin.no-Technologies')}}">No technologies</a>
                         @endforelse
 
 

@@ -31,7 +31,10 @@
         </div>
 
         <p class="mb-5"><strong>{{ $project->text }}</strong></p>
+
+
         <p class="mb-5">Data: <strong>{{ $project->release_date }}</strong></p>
+
         <p class="mb-5">Description: <strong>{{ $project->description }}</strong></p>
 
 

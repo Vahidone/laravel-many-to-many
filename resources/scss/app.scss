@@ -94,18 +94,53 @@ aside {
 
 // stili per accordion in type-projects.blade.php
 
-#accordionExample,
-#accordionExample .accordion-item,
-#accordionExample .accordion-button,
-#accordionExample .accordion-button:hover
- {
-    background-color: #212529;
+#accordionExample {
+    background-color: rgba(33, 37, 41, 0.6);
+    color: white;
+}
+
+#accordionExample .accordion-item {
+    background-color: transparent !important;
 }
 
 #accordionExample .accordion-button {
-    color: #ffffff;
+    background-color: transparent !important;
+    color: white;
+}
+
+#accordionExample .accordion-button:hover {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+#accordionExample .accordion-body {
+    background-color: transparent !important;
+}
+
+#accordionExample .list-group-item {
+    background-color: transparent !important;
 }
 
 
+// ------------------------------------
+
+
+
+
+/* Stile personalizzato per le tabelle */
+.table_bg_csm {
+    background-color: rgba(33, 37, 41, 0.6);
+    color: white;
+}
+
+.table_bg_csm th,
+.table_bg_csm td {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+}
+
+
+.table_bg_csm tbody tr {
+    background-color: rgba(33, 37, 41, 0.6);
+}
 
 // ------------------------------------

@@ -51,7 +51,7 @@
 
 
 
-    <table class="table table-dark table-striped">
+    <table class="table table-dark table-striped table_bg_csm">
         <thead>
             <tr>
 

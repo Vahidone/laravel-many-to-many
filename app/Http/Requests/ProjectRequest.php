@@ -24,6 +24,7 @@ class ProjectRequest extends FormRequest
         return [
             'title' => 'required|min:2|max:20',
             'description' => 'required|min:5',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:3072'
         ];
     }
 
@@ -33,7 +34,11 @@ class ProjectRequest extends FormRequest
             'title.min' => 'Il titolo del progetto deve avere almeno :min caratteri',
             'title.max' => 'Il titolo del progetto non può avere più di :max caratteri',
             'description.required' => 'La descrizione del progetto non può essere vuoto',
-            'description.min' =>  'La descrizione del progetto deve avere almeno :min caratteri'
+            'description.min' =>  'La descrizione del progetto deve avere almeno :min caratteri',
+            'image.image' => 'Il formato dell\'immagine non è corretto',
+            'image.mimes' => 'Il formato dell\'immagine deve essere compreso tra jpeg,png,jpg,gif,svg,webp',
+            'image.max' => 'Il size dell\'immagine non deve superare 3 megabyte',
+
         ];
     }
 }

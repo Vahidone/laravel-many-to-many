@@ -53,7 +53,7 @@
 
 
 
-        <table class="table table-striped table-dark">
+        <table class="table table-striped table-dark table_bg_csm">
             <thead>
                 <tr>
                     <th class="fs-5 fw-bold">Name</th>

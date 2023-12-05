@@ -29,6 +29,9 @@ Route::middleware(['auth','verified'])
 
         Route::get('type-projects', [TypeController::class, 'typeProject'])->name('type-projects');
         Route::get('project-technology/{technology}', [TechnologyController::class, 'projectsTechnologies'])->name('project-technology');
+        Route::get('order-by/{direction}/{column}', [ProjectController::class, 'orderBy'])->name('order-by');
+        Route::get('search', [ProjectController::class, 'search'])->name('search');
+        Route::get('noTechnologies', [ProjectController::class, 'noTechnologies'])->name('no-Technologies');
 
     });
 
